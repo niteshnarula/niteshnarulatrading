@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nitesh Narula | Trade With Discipline</title>
+<meta name="description" content="Nitesh Narula ke saath seekho stock market trading — daily analysis, free education, aur live market updates. Join karo abhi, bilkul free.">
+
+<!-- Open Graph / Meta friendly tags -->
+<meta property="og:title" content="Nitesh Narula | Trade With Discipline">
+<meta property="og:description" content="Daily market analysis, free trading education aur live alerts — sab kuch ek jagah. Join Telegram channel, bilkul free.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #0A0A0B;
+    --surface: #15140F;
+    --surface-2: #1C1A14;
+    --gold: #C9A24B;
+    --gold-pale: #E8D49A;
+    --gold-dim: #8A7138;
+    --green: #1FAA6E;
+    --red: #D2554B;
+    --ink: #F5F1E8;
+    --ink-dim: #B8B2A0;
+    --hairline: rgba(201,162,75,0.18);
+
+    --display: 'Fraunces', serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--body);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  /* subtle film-grain / vignette texture */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,162,75,0.07), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(201,162,75,0.05), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  :focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- Ticker ---------- */
+  .ticker-bar{
+    position:relative; z-index:5;
+    background:var(--surface);
+    border-bottom:1px solid var(--hairline);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:9px 0;
+  }
+  .ticker-track{
+    display:inline-flex;
+    animation:scrollTicker 38s linear infinite;
+  }
+  .ticker-item{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.02em;
+    padding:0 22px;
+    color:var(--ink-dim);
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+  }
+  .ticker-item b{color:var(--ink); font-weight:600;}
+  .up{color:var(--green);}
+  .down{color:var(--red);}
+  @keyframes scrollTicker{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* ---------- Header / Brand strip ---------- */
+  .brand-strip{
+    position:relative; z-index:5;
+    padding:18px 0;
+    border-bottom:1px solid var(--hairline);
+  }
+  .brand-row{
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand-name{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:0.01em;
+    color:var(--gold-pale);
+  }
+  .live-pill{
+    display:inline-flex; align-items:center; gap:7px;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    border:1px solid var(--hairline);
+    padding:6px 12px;
+    border-radius:100px;
+  }
+  .live-dot{
+    width:6px; height:6px; border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 0 0 rgba(31,170,110,0.6);
+    animation:pulseDot 1.8s ease-out infinite;
+  }
+  @keyframes pulseDot{
+    0%{box-shadow:0 0 0 0 rgba(31,170,110,0.55);}
+    70%{box-shadow:0 0 0 7px rgba(31,170,110,0);}
+    100%{box-shadow:0 0 0 0 rgba(31,170,110,0);}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; z-index:2;
+    padding:72px 0 56px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:48px;
+    align-items:center;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+    opacity:0;
+    animation:riseIn 0.7s ease-out 0.1s forwards;
+  }
+  .eyebrow::before{
+    content:""; width:28px; height:1px; background:var(--gold-dim);
+  }
+  .hero h1{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(36px, 5.2vw, 60px);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+    opacity:0;
+    animation:riseIn 0.8s ease-out 0.25s forwards;
+  }
+  .hero h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--gold);
+    background:linear-gradient(90deg, var(--gold), var(--gold-pale));
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .hero-sub{
+    margin-top:22px;
+    font-size:17px;
+    line-height:1.65;
+    color:var(--ink-dim);
+    max-width:480px;
+    opacity:0;
+    animation:riseIn 0.8s ease-out 0.4s forwards;
+  }
+  .hero-cta-row{
+    margin-top:34px;
+    display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+    opacity:0;
+    animation:riseIn 0.8s ease-out 0.55s forwards;
+  }
+  .btn-gold{
+    position:relative;
+    display:inline-flex; align-items:center; gap:10px;
+    background:linear-gradient(135deg, var(--gold-pale), var(--gold) 60%, var(--gold-dim));
+    color:#16140C;
+    font-family:var(--body);
+    font-weight:700;
+    font-size:15px;
+    padding:15px 26px;
+    border-radius:8px;
+    box-shadow:0 8px 28px -8px rgba(201,162,75,0.55);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-gold:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 34px -8px rgba(201,162,75,0.7);
+  }
+  .micro-trust{
+    font-size:13px; color:var(--ink-dim);
+    font-family:var(--mono);
+  }
+  .micro-trust span{color:var(--gold-pale);}
+
+  .joined-row{
+    margin-top:18px;
+    display:flex; align-items:center; gap:10px;
+    opacity:0;
+    animation:riseIn 0.8s ease-out 0.7s forwards;
+  }
+  .avatar-stack{display:flex;}
+  .avatar-stack span{
+    width:26px; height:26px; border-radius:50%;
+    border:2px solid var(--bg);
+    margin-left:-8px;
+    background:linear-gradient(135deg, var(--gold-dim), var(--surface-2));
+    display:flex; align-items:center; justify-content:center;
+    font-size:10px; color:var(--gold-pale); font-family:var(--mono);
+  }
+  .avatar-stack span:first-child{margin-left:0;}
+  .joined-text{font-size:13px; color:var(--ink-dim);}
+
+  @keyframes riseIn{
+    from{opacity:0; transform:translateY(14px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  /* ---------- Signature chart visual ---------- */
+  .chart-card{
+    position:relative;
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+    border:1px solid var(--hairline);
+    border-radius:14px;
+    padding:22px 18px 16px;
+    opacity:0;
+    animation:riseIn 0.9s ease-out 0.35s forwards;
+  }
+  .chart-card-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom:14px;
+    font-family:var(--mono);
+  }
+  .chart-card-head .pair{font-size:13px; color:var(--ink); font-weight:600; letter-spacing:0.02em;}
+  .chart-card-head .price{font-size:13px; color:var(--green);}
+  svg.candles{width:100%; height:190px; display:block;}
+  .candle{transform-origin:bottom; animation:growCandle 0.6s cubic-bezier(.2,.8,.2,1) backwards;}
+  @keyframes growCandle{
+    from{transform:scaleY(0); opacity:0;}
+    to{transform:scaleY(1); opacity:1;}
+  }
+  .glowline{
+    stroke:var(--gold);
+    stroke-width:1.6;
+    fill:none;
+    stroke-dasharray:600;
+    stroke-dashoffset:600;
+    animation:drawLine 2.2s ease-out 0.5s forwards;
+    filter:drop-shadow(0 0 4px rgba(201,162,75,0.5));
+  }
+  @keyframes drawLine{ to{stroke-dashoffset:0;} }
+  .chart-foot{
+    display:flex; justify-content:space-between;
+    margin-top:10px;
+    font-family:var(--mono); font-size:11px; color:var(--ink-dim);
+    border-top:1px solid var(--hairline);
+    padding-top:10px;
+  }
+  .chart-foot b{color:var(--gold-pale);}
+
+  /* ---------- Stats bar ---------- */
+  .stats-bar{
+    position:relative; z-index:2;
+    border-top:1px solid var(--hairline);
+    border-bottom:1px solid var(--hairline);
+    padding:34px 0;
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    text-align:center;
+  }
+  .stat-num{
+    font-family:var(--display);
+    font-size:clamp(24px,3vw,34px);
+    font-weight:600;
+    color:var(--gold-pale);
+  }
+  .stat-label{
+    font-family:var(--mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--ink-dim);
+    margin-top:6px;
+  }
+
+  /* ---------- Section heading pattern ---------- */
+  .section{padding:88px 0; position:relative; z-index:2;}
+  .section-head{
+    max-width:560px;
+    margin:0 auto 52px;
+    text-align:center;
+  }
+  .section-eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .section-head h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(28px,3.4vw,38px);
+    line-height:1.15;
+    color:var(--ink);
+  }
+  .section-head p{
+    margin-top:14px;
+    color:var(--ink-dim);
+    font-size:15.5px;
+    line-height:1.6;
+  }
+
+  .reveal{
+    opacity:0; transform:translateY(22px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in-view{opacity:1; transform:translateY(0);}
+
+  /* ---------- Features grid ---------- */
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--hairline);
+    border:1px solid var(--hairline);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .feature-card{
+    background:var(--surface);
+    padding:32px 26px;
+    transition:background 0.3s ease;
+  }
+  .feature-card:hover{background:var(--surface-2);}
+  .feature-icon{
+    width:42px; height:42px;
+    border:1px solid var(--hairline);
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:18px;
+    margin-bottom:18px;
+    color:var(--gold);
+  }
+  .feature-card h3{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:18px;
+    margin-bottom:8px;
+    color:var(--ink);
+  }
+  .feature-card p{
+    font-size:14px;
+    line-height:1.6;
+    color:var(--ink-dim);
+  }
+
+  /* ---------- Topics ---------- */
+  .topics-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+  }
+  .topic-row{
+    display:flex; align-items:center; justify-content:space-between;
+    background:var(--surface);
+    border:1px solid var(--hairline);
+    border-radius:10px;
+    padding:18px 20px;
+    transition:border-color 0.3s ease, transform 0.3s ease;
+  }
+  .topic-row:hover{border-color:var(--gold-dim); transform:translateX(4px);}
+  .topic-left{display:flex; align-items:center; gap:14px;}
+  .topic-num{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--gold-dim);
+  }
+  .topic-name{font-weight:600; font-size:15px;}
+  .topic-desc{font-size:12.5px; color:var(--ink-dim); margin-top:2px;}
+  .topic-tag{
+    font-family:var(--mono);
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--green);
+    border:1px solid rgba(31,170,110,0.35);
+    padding:4px 10px;
+    border-radius:100px;
+    white-space:nowrap;
+  }
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .testi-card{
+    background:var(--surface);
+    border:1px solid var(--hairline);
+    border-radius:14px;
+    padding:26px;
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .testi-stars{color:var(--gold); font-size:13px; letter-spacing:2px;}
+  .testi-text{
+    font-size:14.5px;
+    line-height:1.65;
+    color:var(--ink);
+  }
+  .testi-person{
+    display:flex; align-items:center; gap:11px;
+    margin-top:auto;
+    padding-top:14px;
+    border-top:1px solid var(--hairline);
+  }
+  .testi-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:linear-gradient(135deg, var(--gold-dim), var(--surface-2));
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:600; font-size:14px;
+    color:var(--gold-pale);
+  }
+  .testi-name{font-size:13.5px; font-weight:600;}
+  .testi-role{font-size:12px; color:var(--ink-dim);}
+
+  /* ---------- Why join ---------- */
+  .why-wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:54px;
+    align-items:center;
+  }
+  .why-photo{
+    position:relative;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid var(--hairline);
+  }
+  .why-photo img{width:100%; height:100%; object-fit:cover; filter:saturate(0.9) contrast(1.05);}
+  .why-photo::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 55%, rgba(10,10,11,0.85));
+  }
+  .why-photo-tag{
+    position:absolute; left:18px; bottom:16px; z-index:2;
+    font-family:var(--mono); font-size:12px; color:var(--gold-pale);
+  }
+  .why-list{display:flex; flex-direction:column; gap:18px;}
+  .why-item{display:flex; gap:16px; align-items:flex-start;}
+  .why-check{
+    flex:none;
+    width:26px; height:26px; border-radius:50%;
+    border:1px solid var(--gold-dim);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold); font-size:13px;
+    margin-top:2px;
+  }
+  .why-item h4{font-size:15.5px; font-weight:700; margin-bottom:3px;}
+  .why-item p{font-size:14px; color:var(--ink-dim); line-height:1.55;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    position:relative;
+    text-align:center;
+    padding:90px 24px;
+    border-radius:22px;
+    margin:0 24px;
+    max-width:1032px;
+    margin-inline:auto;
+    background:
+      radial-gradient(ellipse 70% 100% at 50% 0%, rgba(201,162,75,0.16), transparent 65%),
+      var(--surface);
+    border:1px solid var(--hairline);
+    overflow:hidden;
+  }
+  .final-cta h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.15;
+    max-width:560px;
+    margin:0 auto 16px;
+  }
+  .final-cta p{color:var(--ink-dim); font-size:15.5px; margin-bottom:32px;}
+  .btn-gold-lg{
+    font-size:16.5px;
+    padding:18px 34px;
+  }
+  .final-trust{
+    margin-top:22px;
+    display:flex; justify-content:center; gap:24px; flex-wrap:wrap;
+    font-family:var(--mono); font-size:12px; color:var(--ink-dim);
+  }
+  .final-trust span{color:var(--green);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:44px 0 36px;
+    border-top:1px solid var(--hairline);
+    margin-top:60px;
+  }
+  .footer-brand{
+    font-family:var(--display); font-weight:600; color:var(--gold-pale); font-size:16px; margin-bottom:14px;
+  }
+  .disclaimer{
+    font-size:12.5px;
+    line-height:1.7;
+    color:var(--ink-dim);
+    max-width:760px;
+  }
+  .footer-bottom{
+    margin-top:24px;
+    font-size:12px;
+    color:var(--ink-dim);
+    opacity:0.7;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr; gap:38px;}
+    .stats-grid{grid-template-columns:repeat(2,1fr); gap:28px;}
+    .feature-grid{grid-template-columns:1fr;}
+    .topics-list{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .why-wrap{grid-template-columns:1fr;}
+    .why-photo{max-height:320px;}
+  }
+  @media (max-width:480px){
+    .hero{padding:48px 0 40px;}
+    .section{padding:60px 0;}
+    .final-cta{padding:60px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Ticker -->
+<div class="ticker-bar" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- Brand strip -->
+<div class="brand-strip">
+  <div class="wrap brand-row">
+    <div class="brand-name">NITESH NARULA</div>
+    <div class="live-pill"><span class="live-dot"></span> Channel Live</div>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Stock Market Education · Indian Markets</div>
+      <h1>Trade with <em>clarity</em>,<br>not guesswork.</h1>
+      <p class="hero-sub">Nitesh Narula ke saath roz seekho — market analysis, technical setups aur trading discipline, ek genuine trader ki nazar se. No noise, no pump — sirf reasoning ke saath real education.</p>
+
+      <div class="hero-cta-row">
+        <a class="btn-gold" href="https://t.me/+_hy9FjAYsOc1NmJh" target="_blank" rel="noopener">
+          Join Telegram Channel — Free →
+        </a>
+        <div class="micro-trust">✓ <span>No charges</span> · Instant access</div>
+      </div>
+
+      <div class="joined-row">
+        <div class="avatar-stack" aria-hidden="true">
+          <span>NN</span><span>RK</span><span>AS</span><span>+</span>
+        </div>
+        <div class="joined-text">Traders ki growing community join kar rahe hain</div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-card-head">
+        <span class="pair">NIFTY 50 · 1D</span>
+        <span class="price">▲ 24,812.40</span>
+      </div>
+      <svg class="candles" viewBox="0 0 320 190" preserveAspectRatio="none">
+        <!-- gridlines -->
+        <g stroke="rgba(201,162,75,0.08)" stroke-width="1">
+          <line x1="0" y1="40" x2="320" y2="40"/>
+          <line x1="0" y1="90" x2="320" y2="90"/>
+          <line x1="0" y1="140" x2="320" y2="140"/>
+        </g>
+        <!-- candles: green = up, red = down -->
+        <g id="candleGroup"></g>
+        <polyline class="glowline" id="trendLine" points=""/>
+      </svg>
+      <div class="chart-foot">
+        <span>Daily breakdown · <b>Pre &amp; post-market</b></span>
+        <span><b>SL/Target</b> on every call</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="wrap stats-grid">
+    <div>
+      <div class="stat-num" data-count="3200">0</div>
+      <div class="stat-label">Traders Joined</div>
+    </div>
+    <div>
+      <div class="stat-num" data-count="100">0</div>
+      <div class="stat-label">% Free Always</div>
+    </div>
+    <div>
+      <div class="stat-num">Daily</div>
+      <div class="stat-label">Market Updates</div>
+    </div>
+    <div>
+      <div class="stat-num" data-count="5">0</div>
+      <div class="stat-label">Years Trading</div>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">What You Get</div>
+      <h2>Everything you need to trade smarter</h2>
+      <p>Daily breakdowns, clear levels aur education — sab kuch free, bina kisi shortcut ke.</p>
+    </div>
+
+    <div class="feature-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>Daily Market Analysis</h3>
+        <p>Pre-market aur post-market breakdown, har trading din — taaki aap market ki direction samajh sako.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Stock Calls with Reasoning</h3>
+        <p>Entry, target aur stop-loss ke saath, hamesha samjhaya hua "kyun" — sirf signal nahi.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎓</div>
+        <h3>Free Education</h3>
+        <p>Basics se advanced tak — charts, indicators aur strategy, simple Hindi-English mix mein.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Real-Time Alerts</h3>
+        <p>Jab market mein opportunity bane, turant update — koi delay nahi.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏦</div>
+        <h3>Index Outlook</h3>
+        <p>Nifty, Bank Nifty aur Sensex ka daily outlook, ek hi jagah par.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Trader Community</h3>
+        <p>Saath traders se judo, sawaal pucho, seekhne ka mahaul banao.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Topics -->
+<section class="section" id="topics">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Topics Covered</div>
+      <h2>From basics to professional-grade strategy</h2>
+    </div>
+
+    <div class="topics-list reveal">
+      <div class="topic-row">
+        <div class="topic-left">
+          <span class="topic-num">01</span>
+          <div>
+            <div class="topic-name">Technical Analysis</div>
+            <div class="topic-desc">Charts, patterns, indicators</div>
+          </div>
+        </div>
+        <span class="topic-tag">Free</span>
+      </div>
+      <div class="topic-row">
+        <div class="topic-left">
+          <span class="topic-num">02</span>
+          <div>
+            <div class="topic-name">Fundamental Analysis</div>
+            <div class="topic-desc">Financials, valuation, sector</div>
+          </div>
+        </div>
+        <span class="topic-tag">Free</span>
+      </div>
+      <div class="topic-row">
+        <div class="topic-left">
+          <span class="topic-num">03</span>
+          <div>
+            <div class="topic-name">Market Updates</div>
+            <div class="topic-desc">News, FII/DII data, global cues</div>
+          </div>
+        </div>
+        <span class="topic-tag">Daily</span>
+      </div>
+      <div class="topic-row">
+        <div class="topic-left">
+          <span class="topic-num">04</span>
+          <div>
+            <div class="topic-name">Trading Psychology</div>
+            <div class="topic-desc">Discipline, risk management</div>
+          </div>
+        </div>
+        <span class="topic-tag">Free</span>
+      </div>
+      <div class="topic-row">
+        <div class="topic-left">
+          <span class="topic-num">05</span>
+          <div>
+            <div class="topic-name">Options Basics</div>
+            <div class="topic-desc">CE/PE, Greeks, strategies</div>
+          </div>
+        </div>
+        <span class="topic-tag">Free</span>
+      </div>
+      <div class="topic-row">
+        <div class="topic-left">
+          <span class="topic-num">06</span>
+          <div>
+            <div class="topic-name">Risk Management</div>
+            <div class="topic-desc">Position sizing, capital protection</div>
+          </div>
+        </div>
+        <span class="topic-tag">Free</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Trader Voices</div>
+      <h2>Jo log already join kar chuke hain</h2>
+      <p>Real members ki real baatein — bina kisi paid pump-and-dump ke.</p>
+    </div>
+
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Pehle main random tips follow karta tha, loss hi hota tha. Yahan reasoning ke saath sikhaya jata hai — ab khud chart padh sakta hoon."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">RK</div>
+          <div>
+            <div class="testi-name">Rohit K.</div>
+            <div class="testi-role">Swing Trader, Delhi</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Options Greeks samajh nahi aate the. Free education series ne basics itne clear kar diye ki ab confidence ke saath trade karta hoon."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">AS</div>
+          <div>
+            <div class="testi-name">Ankita S.</div>
+            <div class="testi-role">Options Trader, Pune</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Daily pre-market analysis se din ki shuruaat clear hoti hai. Risk management wale tips ne mujhe bade losses se bachaya."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">VP</div>
+          <div>
+            <div class="testi-name">Vikram P.</div>
+            <div class="testi-role">Positional Investor, Jaipur</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why join -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="why-wrap reveal">
+      <div class="why-photo">
+        <img src="profile.jpg" alt="Nitesh Narula apne trading desk par, multi-monitor chart setup ke saath market analysis karte hue">
+        <div class="why-photo-tag">— Nitesh, live desk se</div>
+      </div>
+
+      <div>
+        <div class="section-eyebrow">Why Join Us</div>
+        <h2 style="font-family:var(--display); font-weight:600; font-size:clamp(26px,3.2vw,34px); margin-bottom:26px; line-height:1.2;">Genuine education, kisi aise se jo khud live trade karta hai</h2>
+
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Transparent reasoning</h4>
+              <p>Har call ke peeche ka "why" samjhaya jata hai — sirf signal nahi diya jata.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Sabhi levels ke liye</h4>
+              <p>Beginner se advanced trader tak, content sab ke liye useful.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Consistent daily updates</h4>
+              <p>Market ka koi move miss nahi hoga — roz fresh analysis.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>100% free, hamesha</h4>
+              <p>Koi hidden charges nahi, kabhi nahi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section" style="padding-top:0;">
+  <div class="final-cta reveal">
+    <div class="section-eyebrow" style="justify-content:center; display:inline-flex;">Start Today</div>
+    <h2>Apni trading journey aaj se shuru karo</h2>
+    <p>Free join karo, daily analysis paao, aur seekhte hue trade karo.</p>
+    <a class="btn-gold btn-gold-lg" href="https://t.me/+_hy9FjAYsOc1NmJh" target="_blank" rel="noopener">
+      ✈️ Join Telegram Channel — Free →
+    </a>
+    <div class="final-trust">
+      <div><span>✓</span> Free to join</div>
+      <div><span>✓</span> No charges ever</div>
+      <div><span>✓</span> Instant access</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">NITESH NARULA</div>
+    <p class="disclaimer">
+      <strong>⚠️ Disclaimer:</strong> Is channel par share kiya gaya saara content sirf educational aur informational purposes ke liye hai. Yeh financial, investment, ya trading advice nahi hai. Stocks aur derivatives mein trading karne mein significant risk of loss hota hai. Koi bhi investment decision lene se pehle kripya SEBI-registered investment advisor se consult karein. Past performance future results ki guarantee nahi hai.
+    </p>
+    <div class="footer-bottom">© 2026 Nitesh Narula. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Ticker content, duplicated for seamless loop
+  const tickerData = [
+    {n:'SENSEX', v:'▲ 0.54%', up:true},
+    {n:'BANK NIFTY', v:'▲ 1.12%', up:true},
+    {n:'NIFTY 50', v:'▲ 0.78%', up:true},
+    {n:'USDINR', v:'▼ 0.21%', up:false},
+    {n:'RELIANCE', v:'▲ 1.34%', up:true},
+    {n:'TCS', v:'▲ 0.89%', up:true},
+    {n:'HDFC BANK', v:'▼ 0.14%', up:false},
+    {n:'INFY', v:'▲ 2.01%', up:true},
+  ];
+  const track = document.getElementById('tickerTrack');
+  function buildTicker(){
+    let html = '';
+    for(let r=0;r<2;r++){
+      tickerData.forEach(d=>{
+        html += `<span class="ticker-item"><b>${d.n}</b> <span class="${d.up?'up':'down'}">${d.v}</span></span>`;
+      });
+    }
+    track.innerHTML = html;
+  }
+  buildTicker();
+
+  // Candlestick chart generation
+  (function(){
+    const group = document.getElementById('candleGroup');
+    const trendLine = document.getElementById('trendLine');
+    const n = 22;
+    const w = 320, h = 190;
+    const slot = w / n;
+    let y = 110;
+    let points = [];
+    let svgHTML = '';
+    for(let i=0;i<n;i++){
+      const open = y;
+      const move = (Math.random()-0.45) * 26;
+      const close = Math.max(20, Math.min(170, open + move));
+      const high = Math.min(open, close) - Math.random()*10;
+      const low = Math.max(open, close) + Math.random()*10;
+      const isUp = close < open; // svg y inverted: smaller y = higher price
+      const x = i * slot + slot*0.2;
+      const bodyW = slot*0.6;
+      const bodyTop = Math.min(open, close);
+      const bodyH = Math.max(2, Math.abs(close-open));
+      const color = isUp ? 'var(--green)' : 'var(--red)';
+      const delay = (i*0.045).toFixed(2);
+
+      svgHTML += `<line x1="${x+bodyW/2}" y1="${high}" x2="${x+bodyW/2}" y2="${low}" stroke="${color}" stroke-width="1" class="candle" style="animation-delay:${delay}s"/>`;
+      svgHTML += `<rect x="${x}" y="${bodyTop}" width="${bodyW}" height="${bodyH}" fill="${color}" rx="1" class="candle" style="animation-delay:${delay}s"/>`;
+
+      points.push(`${x+bodyW/2},${close}`);
+      y = close;
+    }
+    group.innerHTML = svgHTML;
+    trendLine.setAttribute('points', points.join(' '));
+  })();
+
+  // Count-up stats
+  const counters = document.querySelectorAll('.stat-num[data-count]');
+  let countersStarted = false;
+  function animateCounters(){
+    if(countersStarted) return;
+    countersStarted = true;
+    counters.forEach(el=>{
+      const target = parseInt(el.getAttribute('data-count'),10);
+      const dur = 1400;
+      const start = performance.now();
+      function tick(now){
+        const p = Math.min(1,(now-start)/dur);
+        const eased = 1 - Math.pow(1-p,3);
+        const val = Math.floor(eased*target);
+        el.textContent = target >= 1000 ? val.toLocaleString('en-IN')+'+' : val;
+        if(p<1) requestAnimationFrame(tick);
+        else el.textContent = target >= 1000 ? target.toLocaleString('en-IN')+'+' : target;
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        if(entry.target.closest('.stats-bar')) animateCounters();
+      }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // Trigger stats counter on view (stats bar isn't in .reveal, observe separately)
+  const statsBar = document.querySelector('.stats-bar');
+  const statsIO = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting) animateCounters();
+    });
+  }, {threshold:0.4});
+  if(statsBar) statsIO.observe(statsBar);
+</script>
+
+</body>
+</html>
