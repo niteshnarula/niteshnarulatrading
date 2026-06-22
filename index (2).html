@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1724983652181973');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1724983652181973&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<title>Latesh Narula — Trade Smarter, Daily</title>
+<meta name="description" content="Latesh Narula ke saath roz seekho stock market trading — daily analysis, free education aur live alerts. Free Telegram channel join karo abhi.">
+
+<meta property="og:title" content="Latesh Narula — Trade Smarter, Daily">
+<meta property="og:description" content="Daily market analysis, free trading education aur live alerts — ek hi jagah. Free join karo Telegram par.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink: #0B1220;
+    --ink-soft: #43526B;
+    --paper: #FAFAF6;
+    --card: #FFFFFF;
+    --line: #E7E3D8;
+    --green: #16A34A;
+    --green-soft: #E7F6EC;
+    --blue: #155DFC;
+    --blue-soft: #E8EFFF;
+    --red: #DC4545;
+    --amber: #F0A020;
+
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 20px;}
+  :focus-visible{outline:2.5px solid var(--blue); outline-offset:3px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,250,246,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  .topbar-row{display:flex; align-items:center; justify-content:space-between;}
+  .brand{
+    display:flex; align-items:center; gap:9px;
+    font-family:var(--display); font-weight:700; font-size:16.5px;
+  }
+  .brand-dot{
+    width:9px; height:9px; border-radius:50%; background:var(--green);
+    box-shadow:0 0 0 0 rgba(22,163,74,0.5);
+    animation:pulseDot 2s ease-out infinite;
+    flex:none;
+  }
+  @keyframes pulseDot{
+    0%{box-shadow:0 0 0 0 rgba(22,163,74,0.45);}
+    70%{box-shadow:0 0 0 8px rgba(22,163,74,0);}
+    100%{box-shadow:0 0 0 0 rgba(22,163,74,0);}
+  }
+  .top-cta{
+    font-family:var(--body); font-weight:700; font-size:13.5px;
+    background:var(--ink); color:var(--paper);
+    padding:9px 16px; border-radius:100px;
+    display:inline-flex; align-items:center; gap:6px;
+    transition:transform 0.2s ease, background 0.2s ease;
+  }
+  .top-cta:hover{transform:translateY(-1px); background:var(--blue);}
+
+  /* ---------- Marquee ticker ---------- */
+  .ticker{
+    background:var(--ink);
+    overflow:hidden; white-space:nowrap; padding:7px 0;
+  }
+  .ticker-track{display:inline-flex; animation:scrollT 32s linear infinite;}
+  .ticker-item{
+    font-family:var(--mono); font-size:11.5px; color:rgba(250,250,246,0.65);
+    padding:0 18px; display:inline-flex; align-items:center; gap:6px;
+  }
+  .ticker-item b{color:var(--paper); font-weight:600;}
+  .tk-up{color:#4ADE80;} .tk-down{color:#FB7185;}
+  @keyframes scrollT{0%{transform:translateX(0);} 100%{transform:translateX(-50%);}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:44px 0 40px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; top:-120px; right:-120px;
+    width:380px; height:380px; border-radius:50%;
+    background:radial-gradient(circle, rgba(21,93,252,0.10), transparent 70%);
+    z-index:0;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; bottom:-100px; left:-100px;
+    width:320px; height:320px; border-radius:50%;
+    background:radial-gradient(circle, rgba(22,163,74,0.09), transparent 70%);
+    z-index:0;
+  }
+  .hero-inner{
+    position:relative; z-index:2; text-align:center;
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .photo-col{order:-1; margin-bottom:18px;}
+
+  .photo-frame{
+    position:relative;
+    width:148px; height:148px;
+    margin:0 auto 22px;
+    opacity:0; transform:scale(0.85);
+    animation:popIn 0.7s cubic-bezier(.2,.8,.2,1) 0.1s forwards;
+  }
+  @keyframes popIn{ to{opacity:1; transform:scale(1);} }
+  .photo-ring{
+    position:absolute; inset:-8px;
+    border-radius:50%;
+    border:2px solid var(--green);
+    opacity:0.35;
+    animation:ringPulse 2.4s ease-out infinite;
+  }
+  @keyframes ringPulse{
+    0%{transform:scale(0.92); opacity:0.5;}
+    70%{transform:scale(1.18); opacity:0;}
+    100%{opacity:0;}
+  }
+  .photo-frame img{
+    width:148px; height:148px; border-radius:50%;
+    object-fit:cover; object-position:50% 30%;
+    border:4px solid var(--card);
+    box-shadow:0 10px 30px -8px rgba(11,18,32,0.25);
+    position:relative; z-index:2;
+  }
+  .live-badge{
+    position:absolute; bottom:2px; right:2px; z-index:3;
+    background:var(--green); color:#fff;
+    font-family:var(--mono); font-size:9.5px; font-weight:600;
+    padding:4px 9px; border-radius:100px;
+    border:3px solid var(--paper);
+    display:flex; align-items:center; gap:4px;
+  }
+  .live-badge::before{content:"●"; font-size:7px;}
+
+  .eyebrow-pill{
+    display:inline-flex; align-items:center; gap:7px;
+    background:var(--card); border:1px solid var(--line);
+    font-family:var(--mono); font-size:11.5px; color:var(--ink-soft);
+    padding:7px 14px; border-radius:100px;
+    margin-bottom:18px;
+    opacity:0; animation:riseIn 0.7s ease-out 0.25s forwards;
+  }
+
+  .hero h1{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(30px, 7.5vw, 50px);
+    line-height:1.08;
+    letter-spacing:-0.02em;
+    max-width:680px; margin:0 auto;
+    opacity:0; animation:riseIn 0.8s ease-out 0.35s forwards;
+  }
+  .hero h1 .hl-green{color:var(--green);}
+  .hero h1 .hl-blue{color:var(--blue);}
+
+  .hero-sub{
+    margin:18px auto 0;
+    max-width:480px;
+    font-size:16px; line-height:1.6;
+    color:var(--ink-soft);
+    opacity:0; animation:riseIn 0.8s ease-out 0.5s forwards;
+  }
+
+  .hero-ctas{
+    margin-top:28px;
+    display:flex; flex-direction:column; align-items:center; gap:14px;
+    opacity:0; animation:riseIn 0.8s ease-out 0.62s forwards;
+  }
+  .btn-primary{
+    display:inline-flex; align-items:center; gap:9px;
+    background:linear-gradient(135deg, var(--green), #129a48);
+    color:#fff; font-family:var(--body); font-weight:700; font-size:16px;
+    padding:16px 30px; border-radius:14px;
+    box-shadow:0 10px 26px -8px rgba(22,163,74,0.5);
+    transition:transform 0.22s ease, box-shadow 0.22s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 30px -8px rgba(22,163,74,0.6);}
+  .btn-primary svg{width:19px; height:19px;}
+
+  .trust-row{
+    display:flex; align-items:center; gap:8px;
+    font-size:12.5px; color:var(--ink-soft);
+  }
+  .trust-row .stack{display:flex;}
+  .trust-row .stack span{
+    width:22px; height:22px; border-radius:50%;
+    border:2px solid var(--paper);
+    margin-left:-7px;
+    background:var(--blue-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size:8.5px; font-weight:700; color:var(--blue);
+    font-family:var(--mono);
+  }
+  .trust-row .stack span:first-child{margin-left:0;}
+
+  /* mini sparkline strip under hero */
+  .spark-strip{
+    margin-top:34px;
+    opacity:0; animation:riseIn 0.9s ease-out 0.75s forwards;
+  }
+  .spark-strip svg{width:100%; height:64px; display:block;}
+
+  @keyframes riseIn{ from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+
+  /* ---------- Stats strip ---------- */
+  .stats{
+    background:var(--ink);
+    padding:26px 0;
+  }
+  .stats-row{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+    text-align:center;
+  }
+  .stat-num{
+    font-family:var(--display); font-weight:700;
+    font-size:clamp(19px,4.5vw,28px); color:#fff;
+  }
+  .stat-label{
+    font-family:var(--mono); font-size:9.5px; text-transform:uppercase;
+    letter-spacing:0.06em; color:rgba(250,250,246,0.55);
+    margin-top:4px;
+  }
+
+  /* ---------- Sections ---------- */
+  .section{padding:64px 0;}
+  .section-head{max-width:520px; margin:0 auto 36px; text-align:center;}
+  .tag{
+    display:inline-block;
+    font-family:var(--mono); font-size:11.5px; font-weight:600;
+    text-transform:uppercase; letter-spacing:0.07em;
+    padding:5px 12px; border-radius:100px;
+    margin-bottom:14px;
+  }
+  .tag-green{background:var(--green-soft); color:var(--green);}
+  .tag-blue{background:var(--blue-soft); color:var(--blue);}
+  .section-head h2{
+    font-family:var(--display); font-weight:700;
+    font-size:clamp(24px,5.5vw,34px); line-height:1.18;
+  }
+  .section-head p{
+    margin-top:12px; color:var(--ink-soft); font-size:15px; line-height:1.6;
+  }
+
+  .reveal{opacity:0; transform:translateY(20px); transition:opacity 0.65s ease, transform 0.65s ease;}
+  .reveal.in-view{opacity:1; transform:translateY(0);}
+
+  /* ---------- Feature cards ---------- */
+  .feat-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+  }
+  .feat-card{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:18px; padding:24px 20px;
+    transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .feat-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 32px -16px rgba(11,18,32,0.18);
+    border-color:transparent;
+  }
+  .feat-ico{
+    width:44px; height:44px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; margin-bottom:14px;
+  }
+  .ico-a{background:var(--green-soft);}
+  .ico-b{background:var(--blue-soft);}
+  .ico-c{background:#FFF1E0;}
+  .feat-card h3{font-family:var(--display); font-weight:700; font-size:16.5px; margin-bottom:6px;}
+  .feat-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.55;}
+
+  /* ---------- Topics ---------- */
+  .topics-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:12px;
+  }
+  .topic-card{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:18px;
+    display:flex; flex-direction:column; gap:10px;
+    transition:border-color 0.25s ease;
+  }
+  .topic-card:hover{border-color:var(--green);}
+  .topic-top{display:flex; align-items:center; justify-content:space-between;}
+  .topic-emoji{font-size:20px;}
+  .topic-pill{
+    font-family:var(--mono); font-size:10px; font-weight:600;
+    text-transform:uppercase; color:var(--green);
+    background:var(--green-soft); padding:3px 9px; border-radius:100px;
+  }
+  .topic-card h4{font-size:14.5px; font-weight:700;}
+  .topic-card span{font-size:12px; color:var(--ink-soft);}
+
+  /* ---------- Reviews ---------- */
+  .review-scroll{
+    display:flex; gap:14px; overflow-x:auto;
+    padding:4px 4px 16px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  .review-scroll::-webkit-scrollbar{height:5px;}
+  .review-scroll::-webkit-scrollbar-thumb{background:var(--line); border-radius:10px;}
+  .review-card{
+    flex:none; width:270px; scroll-snap-align:start;
+    background:var(--card); border:1px solid var(--line); border-radius:18px;
+    padding:22px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .review-stars{color:var(--amber); font-size:13px; letter-spacing:2px;}
+  .review-text{font-size:13.5px; line-height:1.6; color:var(--ink);}
+  .review-person{display:flex; align-items:center; gap:10px; padding-top:12px; border-top:1px solid var(--line);}
+  .review-avatar{
+    width:34px; height:34px; border-radius:50%;
+    background:var(--blue-soft); color:var(--blue);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:12.5px;
+  }
+  .review-name{font-size:13px; font-weight:700;}
+  .review-role{font-size:11px; color:var(--ink-soft);}
+
+  /* ---------- Why join ---------- */
+  .why-card{
+    background:var(--ink); border-radius:24px; padding:36px 24px;
+    color:#fff;
+  }
+  .why-card .tag{background:rgba(22,163,74,0.18); color:#4ADE80;}
+  .why-card h2{
+    font-family:var(--display); font-weight:700; font-size:clamp(22px,5vw,30px);
+    line-height:1.2; margin-bottom:24px;
+  }
+  .why-list{display:flex; flex-direction:column; gap:18px;}
+  .why-item{display:flex; gap:13px; align-items:flex-start;}
+  .why-check{
+    flex:none; width:26px; height:26px; border-radius:50%;
+    background:rgba(22,163,74,0.18); color:#4ADE80;
+    display:flex; align-items:center; justify-content:center; font-size:13px;
+  }
+  .why-item h4{font-size:14.5px; font-weight:700; margin-bottom:2px;}
+  .why-item p{font-size:13px; color:rgba(250,250,246,0.62); line-height:1.5;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    text-align:center;
+    background:linear-gradient(160deg, var(--green-soft), var(--blue-soft));
+    border-radius:24px; padding:48px 22px;
+  }
+  .final-cta h2{
+    font-family:var(--display); font-weight:700;
+    font-size:clamp(24px,6vw,36px); line-height:1.15; margin-bottom:12px;
+  }
+  .final-cta p{color:var(--ink-soft); font-size:15px; margin-bottom:26px;}
+  .final-trust{
+    margin-top:20px; display:flex; justify-content:center; gap:18px; flex-wrap:wrap;
+    font-size:12px; color:var(--ink-soft); font-family:var(--mono);
+  }
+  .final-trust b{color:var(--green);}
+
+  /* ---------- Footer ---------- */
+  footer{padding:36px 0 30px;}
+  .footer-brand{font-family:var(--display); font-weight:700; font-size:15px; margin-bottom:12px;}
+  .disclaimer{font-size:11.5px; line-height:1.65; color:var(--ink-soft); max-width:720px;}
+  .footer-bottom{margin-top:18px; font-size:11.5px; color:var(--ink-soft); opacity:0.7;}
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .sticky-cta{
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:rgba(250,250,246,0.92);
+    backdrop-filter:blur(12px);
+    border-top:1px solid var(--line);
+    display:none;
+  }
+  .sticky-cta a{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    background:var(--green); color:#fff; font-weight:700; font-size:15px;
+    padding:14px; border-radius:13px;
+  }
+
+  /* ---------- Desktop layout shifts ---------- */
+  @media (min-width:760px){
+    .hero-inner{flex-direction:row-reverse; justify-content:space-between; gap:48px; text-align:left; align-items:center;}
+    .photo-col{order:0; margin-bottom:0;}
+    .text-col{flex:1;}
+    .photo-frame{width:220px; height:220px;}
+    .photo-frame img{width:220px; height:220px;}
+    .hero-ctas{align-items:flex-start;}
+  }
+
+  @media (max-width:759px){
+    .sticky-cta{display:block;}
+    body{padding-bottom:76px;}
+    .feat-grid{grid-template-columns:1fr;}
+    .topics-grid{grid-template-columns:1fr 1fr;}
+    .stats-row{grid-template-columns:repeat(2,1fr); gap:20px;}
+    .top-cta{display:none;}
+  }
+  @media (max-width:420px){
+    .topics-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar-row">
+    <div class="brand"><span class="brand-dot"></span> Latesh Narula</div>
+    <a class="top-cta" href="https://t.me/+dBOSleavICdlZGNl" target="_blank" rel="noopener">Join Free →</a>
+  </div>
+</div>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="text-col">
+      <div class="eyebrow-pill">📊 Stock Market Education · Indian Markets</div>
+
+      <h1>Trading seekho <span class="hl-green">sahi tarike</span> se, ek <span class="hl-blue">real trader</span> se</h1>
+      <p class="hero-sub">Roz market analysis, stock calls aur free education — bina kisi shortcut ke. Latesh Narula ke saath, jo khud live trade karta hai.</p>
+
+      <div class="hero-ctas">
+        <a class="btn-primary" href="https://t.me/+dBOSleavICdlZGNl" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.5L2.7 11.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.5.7 1 .4l2.7-2 5.6 4.1c.6.4 1 .2 1.2-.5l3.3-15.5c.3-1-.3-1.5-1.4-1z"/></svg>
+          Telegram Channel Join Karo — Free
+        </a>
+        <div class="trust-row">
+          <div class="stack"><span>RK</span><span>AS</span><span>VP</span></div>
+          3,000+ traders already inside
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-col">
+      <div class="photo-frame">
+        <div class="photo-ring"></div>
+        <img src="profile.jpg" alt="Latesh Narula, stock market trader aur educator">
+        <div class="live-badge">LIVE</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap spark-strip">
+    <svg viewBox="0 0 1000 64" preserveAspectRatio="none">
+      <polyline id="sparkLine" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points=""/>
+      <polyline id="sparkFill" fill="url(#sg)" stroke="none" points=""/>
+      <defs>
+        <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#16A34A" stop-opacity="0.16"/>
+          <stop offset="100%" stop-color="#16A34A" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="wrap stats-row">
+    <div><div class="stat-num" data-count="3000">0</div><div class="stat-label">Traders Joined</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Free Always</div></div>
+    <div><div class="stat-num">Daily</div><div class="stat-label">Updates</div></div>
+    <div><div class="stat-num" data-count="5">0</div><div class="stat-label">Yrs Experience</div></div>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="tag tag-green">What You Get</span>
+      <h2>Sab kuch jo smart trading ke liye chahiye</h2>
+      <p>Daily breakdowns, clear levels aur asaan education — bina kisi cost ke.</p>
+    </div>
+    <div class="feat-grid reveal">
+      <div class="feat-card">
+        <div class="feat-ico ico-a">📈</div>
+        <h3>Daily Market Analysis</h3>
+        <p>Pre-market aur post-market breakdown, har trading din.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico ico-b">🎯</div>
+        <h3>Calls with Reasoning</h3>
+        <p>Entry, target aur stop-loss — hamesha "kyun" ke saath samjhaya hua.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico ico-c">🎓</div>
+        <h3>Free Education</h3>
+        <p>Basics se advanced tak, simple aur clear bhasha mein.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico ico-a">⚡</div>
+        <h3>Real-Time Alerts</h3>
+        <p>Jab opportunity bane, turant update milta hai.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico ico-b">🏦</div>
+        <h3>Index Outlook</h3>
+        <p>Nifty, Bank Nifty aur Sensex ka daily outlook.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico ico-c">💬</div>
+        <h3>Trader Community</h3>
+        <p>Saath traders se judo aur saath seekho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Topics -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="tag tag-blue">Topics Covered</span>
+      <h2>Basics se professional-grade strategy tak</h2>
+    </div>
+    <div class="topics-grid reveal">
+      <div class="topic-card">
+        <div class="topic-top"><span class="topic-emoji">📊</span><span class="topic-pill">Free</span></div>
+        <h4>Technical Analysis</h4>
+        <span>Charts, patterns, indicators</span>
+      </div>
+      <div class="topic-card">
+        <div class="topic-top"><span class="topic-emoji">📡</span><span class="topic-pill">Daily</span></div>
+        <h4>Market Updates</h4>
+        <span>News, FII/DII, global cues</span>
+      </div>
+      <div class="topic-card">
+        <div class="topic-top"><span class="topic-emoji">🧠</span><span class="topic-pill">Free</span></div>
+        <h4>Trading Psychology</h4>
+        <span>Discipline, risk control</span>
+      </div>
+      <div class="topic-card">
+        <div class="topic-top"><span class="topic-emoji">🛡️</span><span class="topic-pill">Free</span></div>
+        <h4>Risk Management</h4>
+        <span>Position sizing, capital safety</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:24px;">
+      <span class="tag tag-green">Trader Voices</span>
+      <h2>Jo log already join kar chuke hain</h2>
+    </div>
+  </div>
+  <div class="wrap reveal">
+    <div class="review-scroll">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Pehle random tips follow karta tha, loss hi hota tha. Yahan reasoning ke saath sikhaya jata hai — ab khud chart padh sakta hoon."</p>
+        <div class="review-person">
+          <div class="review-avatar">RK</div>
+          <div><div class="review-name">Rohit K.</div><div class="review-role">Swing Trader, Delhi</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Options Greeks samajh nahi aate the. Free education series ne basics itne clear kar diye ki ab confidence ke saath trade karta hoon."</p>
+        <div class="review-person">
+          <div class="review-avatar">AS</div>
+          <div><div class="review-name">Ankita S.</div><div class="review-role">Options Trader, Pune</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Daily pre-market analysis se din ki shuruaat clear hoti hai. Risk management tips ne bade losses se bachaya."</p>
+        <div class="review-person">
+          <div class="review-avatar">VP</div>
+          <div><div class="review-name">Vikram P.</div><div class="review-role">Investor, Jaipur</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Sabse achhi baat — koi pressure nahi karta paid service lene ka. Sab kuch genuinely free aur useful hai."</p>
+        <div class="review-person">
+          <div class="review-avatar">SM</div>
+          <div><div class="review-name">Sanya M.</div><div class="review-role">Beginner Trader, Mumbai</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why join -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="why-card reveal">
+      <span class="tag">Why Join Us</span>
+      <h2>Genuine education, kisi aise se jo khud live trade karta hai</h2>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div><h4>Transparent reasoning</h4><p>Har call ke peeche ka "why" samjhaya jata hai — sirf signal nahi.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div><h4>Sabhi levels ke liye</h4><p>Beginner se advanced trader tak, sab ke liye useful content.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div><h4>Consistent daily updates</h4><p>Market ka koi move miss nahi hoga.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div><h4>100% free, hamesha</h4><p>Koi hidden charges nahi, kabhi nahi.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="final-cta reveal">
+      <span class="tag tag-green">Start Today</span>
+      <h2>Apni trading journey aaj se shuru karo</h2>
+      <p>Free join karo, daily analysis paao, aur seekhte hue trade karo.</p>
+      <a class="btn-primary" href="https://t.me/+dBOSleavICdlZGNl" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.5L2.7 11.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.5.7 1 .4l2.7-2 5.6 4.1c.6.4 1 .2 1.2-.5l3.3-15.5c.3-1-.3-1.5-1.4-1z"/></svg>
+        Telegram Channel Join Karo
+      </a>
+      <div class="final-trust">
+        <div><b>✓</b> Free to join</div>
+        <div><b>✓</b> No charges ever</div>
+        <div><b>✓</b> Instant access</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Latesh Narula</div>
+    <p class="disclaimer">
+      <strong>⚠️ Disclaimer:</strong> Is channel par share kiya gaya saara content sirf educational aur informational purposes ke liye hai. Yeh financial, investment ya trading advice nahi hai. Stocks aur derivatives mein trading karne mein significant risk of loss hota hai. Koi bhi investment decision lene se pehle SEBI-registered investment advisor se consult karein. Past performance future results ki guarantee nahi hai.
+    </p>
+    <div class="footer-bottom">© 2026 Latesh Narula. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="https://t.me/+dBOSleavICdlZGNl" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.5L2.7 11.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.5.7 1 .4l2.7-2 5.6 4.1c.6.4 1 .2 1.2-.5l3.3-15.5c.3-1-.3-1.5-1.4-1z"/></svg>
+    Free Telegram Channel Join Karo
+  </a>
+</div>
+
+<script>
+  const tickerData = [
+    {n:'SENSEX', v:'▲ 0.54%', up:true},{n:'BANK NIFTY', v:'▲ 1.12%', up:true},
+    {n:'NIFTY 50', v:'▲ 0.78%', up:true},{n:'USDINR', v:'▼ 0.21%', up:false},
+    {n:'RELIANCE', v:'▲ 1.34%', up:true},{n:'TCS', v:'▲ 0.89%', up:true},
+    {n:'HDFC BANK', v:'▼ 0.14%', up:false},{n:'INFY', v:'▲ 2.01%', up:true},
+  ];
+  const track = document.getElementById('tickerTrack');
+  let th = '';
+  for(let r=0;r<2;r++){
+    tickerData.forEach(d=>{
+      th += `<span class="ticker-item"><b>${d.n}</b> <span class="${d.up?'tk-up':'tk-down'}">${d.v}</span></span>`;
+    });
+  }
+  track.innerHTML = th;
+
+  // Sparkline
+  (function(){
+    const w=1000,h=64,n=40;
+    let pts=[]; let y=32;
+    for(let i=0;i<n;i++){
+      y += (Math.random()-0.42)*9;
+      y = Math.max(8, Math.min(56, y));
+      pts.push([i*(w/(n-1)), y]);
+    }
+    const line = pts.map(p=>p.join(',')).join(' ');
+    document.getElementById('sparkLine').setAttribute('points', line);
+    const fillPts = `0,${h} ` + line + ` ${w},${h}`;
+    document.getElementById('sparkFill').setAttribute('points', fillPts);
+  })();
+
+  // Count-up
+  const counters = document.querySelectorAll('.stat-num[data-count]');
+  let started=false;
+  function animateCounters(){
+    if(started) return; started=true;
+    counters.forEach(el=>{
+      const target = parseInt(el.getAttribute('data-count'),10);
+      const start = performance.now(), dur=1300;
+      function tick(now){
+        const p=Math.min(1,(now-start)/dur);
+        const eased=1-Math.pow(1-p,3);
+        const val=Math.floor(eased*target);
+        el.textContent = target>=1000 ? val.toLocaleString('en-IN')+'+' : val;
+        if(p<1) requestAnimationFrame(tick);
+        else el.textContent = target>=1000 ? target.toLocaleString('en-IN')+'+' : target;
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+  const statsEl = document.querySelector('.stats');
+  new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) animateCounters(); });
+  },{threshold:0.4}).observe(statsEl);
+
+  // Reveal on scroll
+  document.querySelectorAll('.reveal').forEach(el=>{
+    new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in-view'); });
+    },{threshold:0.12}).observe(el);
+  });
+
+  // Meta Pixel — Subscribe event on all Telegram buttons
+  document.querySelectorAll('a[href*="t.me"]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if(typeof fbq === 'function'){
+        fbq('track', 'Subscribe');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
